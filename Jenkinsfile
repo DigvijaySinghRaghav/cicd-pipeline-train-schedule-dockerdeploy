@@ -40,7 +40,7 @@ pipeline {
             }
             steps {
                 input 'Deploy to Production?'
-                milstone(1)
+                milestone(1)
                 withCredentials([usernamePassword(credentialsId: 'webserver_login' , usernameVariable: 'USERNAME' , passwordVariable: 'USERPASS')]) {
                     script {
                         try {
